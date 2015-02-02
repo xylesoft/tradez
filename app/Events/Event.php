@@ -1,4 +1,4 @@
-<?php namespace App\Events;
+<?php namespace TradeZ\Events;
 
 abstract class Event {
 
