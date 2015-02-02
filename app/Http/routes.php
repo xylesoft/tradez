@@ -11,11 +11,12 @@
 |
 */
 
-Route::get('/', 'WelcomeController@index');
+Route::get('/', 'IndexController@getDashboard');
 
-Route::get('home', 'HomeController@index');
-
-Route::controllers([
-	'auth' => 'Auth\AuthController',
-	'password' => 'Auth\PasswordController',
+Route::get('/reports/compare-stations/{firstStationId}/{secondStationId}', [
+	'uses' => 'CompareStationController@getReport',
+	'name' => 'reports.compare-stations'
+])->where([
+	'firstStationId' => '\d+',
+	'secondStationId' => '\d+'
 ]);
