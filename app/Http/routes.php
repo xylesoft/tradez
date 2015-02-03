@@ -15,8 +15,23 @@ Route::get('/', 'IndexController@getDashboard');
 
 Route::get('/reports/compare-stations/{firstStationId}/{secondStationId}', [
 	'uses' => 'CompareStationController@getReport',
-	'name' => 'reports.compare-stations'
+	'as' => 'reports.compare-stations'
 ])->where([
 	'firstStationId' => '\d+',
 	'secondStationId' => '\d+'
+]);
+
+Route::get('/stations/add', [
+	'uses' => 'StationsController@getAddStation',
+	'as' => 'stations.add'
+]);
+
+Route::post('/stations/add', [
+	'uses' => 'StationsController@postAddStation',
+	'as' => 'stations.store'
+]);
+
+Route::get('/stations/{stationId}', [
+	'uses' => 'StationsController@getViewStation',
+	'as' => 'stations.view'
 ]);

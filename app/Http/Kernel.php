@@ -24,9 +24,9 @@ class Kernel extends HttpKernel {
 	 * @var array
 	 */
 	protected $routeMiddleware = [
-		'auth' => 'TradeZ\Http\Middleware\Authenticate',
-		'auth.basic' => 'Illuminate\Auth\Middleware\AuthenticateWithBasicAuth',
-		'guest' => 'TradeZ\Http\Middleware\RedirectIfAuthenticated',
+		// 'auth' => 'TradeZ\Http\Middleware\Authenticate',
+		// 'auth.basic' => 'Illuminate\Auth\Middleware\AuthenticateWithBasicAuth',
+		// 'guest' => 'TradeZ\Http\Middleware\RedirectIfAuthenticated',
 	];
 
 }

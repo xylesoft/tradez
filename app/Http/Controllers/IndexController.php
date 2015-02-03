@@ -14,7 +14,8 @@ class IndexController extends Controller {
 	 */
 	public function getDashboard()
 	{
-		//
+		
+		return view('dashboard');
 	}
 
 }
