@@ -6,3 +6,35 @@
 body, label, .checkbox label {
 	font-weight: 300;
 }
+
+
+
+.editableWidth(@width) {
+  display: inline-block;
+  text-align: right;
+  min-width: @width;
+
+  &:hover {
+    border-bottom: 1px solid #000000;
+  }
+}
+
+.editableField-small {
+  .editableWidth(40px)
+}
+.editableField-medium {
+  .editableWidth(80px)
+}
+.editableField-large {
+  .editableWidth(120px)
+}
+
+//.editableWidth-sm {
+//  min-width: 40px;
+//}
+//.editableWidth-md {
+//  min-width: 40px;
+//}
+//.editableWidth-lg {
+//  min-width: 40px;
+//}
